@@ -1,0 +1,158 @@
+<svg width="400" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect width="400" height="600" fill="#1a365d" rx="20" ry="20" />
+
+  <!-- glowAnimation -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- glowAnimationForOnlyMainStar -->
+  <defs>
+    <filter id="glowForOnlyMainStar" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- boldPepero -->
+  <rect x="180" y="490" width="40" height="70" fill="#78380b" rx="5" ry="5" />
+
+  <!-- mainLeaf -->
+  <path d="
+    M 200 100
+    L 130 250
+    C 128 252 128 255 130 255
+    L 270 255
+    C 272 255 272 252 270 250
+    Z" fill="#2f855a" />
+
+  <path d="
+    M 200 180
+    L 80 370
+    C 75 375 75 380 80 380
+    L 320 380
+    C 325 380 325 375 320 370
+    Z" fill="#276749" />
+
+  <path d="
+    M 200 280
+    L 60 490
+    C 55 495 55 500 60 500
+    L 340 500
+    C 345 500 345 495 340 490
+    Z" fill="#22543d" />
+
+  <!-- mainStar -->
+  <g filter="url(#glowForOnlyMainStar)">
+    <path d="
+    M 200 80
+    C 205 90 210 95 230 100
+    C 220 105 218 110 215 115
+    C 217 125 218 130 220 135
+    C 210 130 205 128 200 125
+    C 195 128 190 130 180 135
+    C 182 130 183 125 185 115
+    C 182 110 180 105 170 100
+    C 190 95 195 90 200 80" fill="#ffd700">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- bigBalls -->
+  <g filter="url(#glow)">
+    <circle cx="150" cy="280" r="10" fill="#e53e3e">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="250" cy="280" r="10" fill="#3182ce">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="350" r="10" fill="#ecc94b">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="220" cy="350" r="10" fill="#e53e3e">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="140" cy="420" r="10" fill="#3182ce">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="260" cy="420" r="10" fill="#ecc94b">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="450" r="10" fill="#e53e3e">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="220" cy="450" r="10" fill="#3182ce">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- smallBalls -->
+  <g filter="url(#glow)">
+    <circle cx="160" cy="230" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" cy="230" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="200" cy="200" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="170" cy="300" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="230" cy="300" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="140" cy="380" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="260" cy="380" r="3" fill="#fff5b1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- glitters -->
+  <g filter="url(#glow)">
+    <circle cx="180" cy="320" r="4" fill="#ffeb3b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="220" cy="320" r="4" fill="#ffeb3b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="150" cy="400" r="4" fill="#ffeb3b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="250" cy="400" r="4" fill="#ffeb3b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="200" cy="470" r="4" fill="#ffeb3b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.1s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- sign -->
+  <rect x="160" y="140" width="80" height="30" fill="#f6e05e" rx="5" ry="5" />
+  <text x="200" y="153" text-anchor="middle" fill="#000000" font-family="Arial" font-size="12">000 Days</text>
+  <path d="m396 310
+             c-1.5355 0-3.0784 0.5-4.25 1.7
+             c-2.3431 2.4-2.2788 6.1 0 8.5
+             l9.25 9.8 9.25-9.8
+             c2.279-2.4 2.343-6.1 0-8.5
+             c-2.343-2.3-6.157-2.3-8.5 0
+             l-0.75 0.8-0.75-0.8
+             c-1.172-1.2-2.7145-1.7-4.25-1.7z" fill="#e74c3c" transform="scale(0.5)" />
+  <text x="185" y="165" text-anchor="middle" fill="#000000" font-family="Arial" font-size="12">Initial</text>
+  <text x="220" y="165" text-anchor="middle" fill="#000000" font-family="Arial" font-size="12">Initial</text>
+</svg>
